@@ -6,18 +6,15 @@ import wheel from "./../../styles/images/wheel.png";
 
 import "./ChooseType.scss";
 import "./ChooseWheels.scss";
-import "./Summary.scss";
+import "./../Checkout/Summary.scss";
 
 class Configure extends Component {
   constructor(props) {
     super(props);
     console.log("Configure props", this.props);
     this.state = {
-      type: "none",
-      wheel: "none",
-      name: "",
-      email: "",
-      adress: ""
+      type: "",
+      wheel: ""
     };
   }
 
@@ -43,18 +40,8 @@ class Configure extends Component {
   handleConfigureChange = () => {
     const type = this.state.type;
     const wheel = this.state.wheel;
-    const name = this.state.name;
-    const email = this.state.email;
-    const adress = this.state.adress;
-    console.log("handleConfigureChange", type, wheel, name, email, adress);
-    this.props.onConfigureHasChanged(type, wheel, name, email, adress);
-  };
-
-  handleInputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
+    console.log("handleConfigureChange", type, wheel);
+    this.props.onConfigureHasChanged(type, wheel);
   };
 
   render() {
@@ -224,60 +211,6 @@ class Configure extends Component {
 
         <div className='container'>
           <div className='wrapper'>
-            <div className='title'>
-              <div>
-                <h2>Personal Details</h2>
-                <p>
-                  Your hybrid PDB. Enhance your pumping and turns with a classic
-                  skateboard feeling.
-                </p>
-              </div>
-            </div>
-            <form className='teaser-one'>
-              <div>
-                <h4>Name</h4>
-
-                <input
-                  id='input-name'
-                  name='name'
-                  type='text'
-                  placeholder='Name'
-                  value={this.state.name}
-                  onChange={this.handleInputChange}
-                  required
-                />
-              </div>
-              <div>
-                <h4>Email</h4>
-
-                <input
-                  id='input-email'
-                  name='email'
-                  type='text'
-                  placeholder='Email'
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                  required
-                />
-              </div>
-              <div>
-                <h4>Location</h4>
-
-                <input
-                  id='input-adress'
-                  name='adress'
-                  type='text'
-                  placeholder='Adress'
-                  value={this.state.adress}
-                  onChange={this.handleInputChange}
-                  required
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-        <div className='container'>
-          <div className='wrapper'>
             <div className='summary-title'>
               <div>
                 <h2>Summary</h2>
@@ -299,20 +232,6 @@ class Configure extends Component {
                 <tr>
                   <td>Total</td>
                   <td>250.000 IDR</td>
-                </tr>
-                <tr>
-                  <td>..</td>
-                  <td>...</td>
-                </tr>
-                <tr>
-                  <td>Adress</td>
-                  <td>
-                    {this.state.name} {this.state.adress}
-                  </td>
-                </tr>
-                <tr>
-                  <td>Email</td>
-                  <td>{this.state.email}</td>
                 </tr>
               </table>
             </div>

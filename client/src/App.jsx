@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Product from "./views/Product";
-//import Checkout from "./views/Checkout";
+import Checkout from "./views/Checkout";
 import Confirmation from "./views/Confirmation";
 import About from "./views/About";
 import Contact from "./views/Contact";
@@ -27,14 +27,11 @@ export class App extends Component {
     };
   }
 
-  handleCreateOrder = async (type, wheel, name, email, adress) => {
+  handleCreateOrder = async (type, wheel) => {
     console.log("handleCreateOrder running");
     const data = {
       type,
-      wheel,
-      name,
-      email,
-      adress
+      wheel
     };
     const order = await createOrder(data);
     console.log("order app:", order);
@@ -42,7 +39,7 @@ export class App extends Component {
       order
     });
     console.log("order state app:", this.state.order);
-    window.location.href = `/product/confirmation/${order._id}`;
+    window.location.href = `/product/checkout/${order._id}`;
   };
 
   render() {
@@ -60,6 +57,13 @@ export class App extends Component {
                   {...props}
                   onConfigureChange={this.handleCreateOrder}
                 />
+              )}
+              exact
+            />
+             <Route
+              path='/product/checkout/:id'
+              render={(props) => (
+                <Checkout {...props} order={this.state.order} />
               )}
               exact
             />

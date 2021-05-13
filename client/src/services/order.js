@@ -8,6 +8,22 @@ export const createOrder = async (data) => {
   return order;
 };
 
+export const loadOrderforCheckout = async (id) => {
+  console.log(" loadOrderforConfirmation running");
+  const response = await api.get(`product/checkout/${id}`);
+  const order = response.data.order;
+  console.log("loadOrderforCheckout feedback order", order);
+  return order;
+};
+
+export const finalizeOrder = async (id, data) => {
+  console.log("createOrder running");
+  const response = await api.patch(`product/checkout/${id}`, data);
+  const order = response.data.order;
+  console.log("create order feedback order", order);
+  return order;
+};
+
 export const loadOrderforConfirmation = async (id) => {
   console.log(" loadOrderforConfirmation running");
   const response = await api.get(`product/confirmation/${id}`);
