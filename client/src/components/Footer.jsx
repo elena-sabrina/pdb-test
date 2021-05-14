@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./Footer.scss";
 
@@ -9,7 +10,7 @@ class Footer extends Component {
         <div className='wrapper'>
           <div className='adress'>
             <div>
-              <h5>PDB Surfskates</h5>
+              <h4>PDB Surfskates</h4>
               <p>
                 711-2880 Nulla St.
                 <br />
@@ -18,19 +19,31 @@ class Footer extends Component {
                 (257) 563-7401
               </p>
               <br />
-              <p>hello@pdbsurskates.com</p>
+
+              <p>hello@pdbsurfskates.com</p>
             </div>
           </div>
           <div className='about'>
-            <h5>About us</h5>
+            <h4>About us</h4>
             <p className='p-adding-line-height'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus sunt iure.
+              Temporibus sunt iure.{" "}
             </p>
+            <br />
+            <br />
             <div className='links'>
-              <p>Link</p>
-              <p>Link</p>
-              <p>Link</p>
+              <Link to='/' className='Link'>
+                Home
+              </Link>
+              <Link to='/product' className='Link'>
+                Order
+              </Link>
+              <Link to='/about' className='Link'>
+                About
+              </Link>
+              <Link to='/contact' className='Link'>
+                Contact
+              </Link>
             </div>
           </div>
         </div>

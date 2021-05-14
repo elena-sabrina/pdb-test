@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logoscreenshot from "./../styles/images/logoscreenshot.png";
+import close from "./../styles/images/close.svg";
+import openmenu from "./../styles/images/openmenu.svg";
 import "./Navbar.scss";
 import "./NavbarAnimations.scss";
 
@@ -33,27 +35,27 @@ class Navbar extends Component {
           <div className='Nav'>
             <div className='Navbar'>
               <Link to='/' className='Link'>
-                <img className='logo logo-link' src={logoscreenshot} alt='logo' />
+                <img className='logo link' src={logoscreenshot} alt='logo' />
               </Link>
 
-              <div className='hamburger hamburger-closed' onClick={this.handleHamburgerClick}>
-                <div className='line lineone'></div>
-                <div className='line linetwo'></div>
-                <div className='line linethree'></div>
+              <div
+                className='hamburger hamburger-closed'
+                onClick={this.handleHamburgerClick}
+              >
+                <img className='link' src={openmenu} alt='logo' />
               </div>
             </div>
           </div>
         )) || (
           <div className='Flyout'>
             <div className='Nav'>
-              <div className='Navbar'>
-                <img className='logo' src={logoscreenshot} alt='logo' />
-
-                <div className='hamburger hamburger-open' onClick={this.handleHamburgerClick}>
-                  <div className='line lineone'></div>
-                  <div className='line linetwo'></div>
-                  <div className='line linethree'></div>
-                </div>
+              <div className='Navbar-open'>
+                <img
+                  className='link closeimage'
+                  onClick={this.handleHamburgerClick}
+                  src={close}
+                  alt='close-button'
+                />
               </div>
 
               <div className='wrapper'>

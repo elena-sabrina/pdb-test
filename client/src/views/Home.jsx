@@ -66,7 +66,7 @@ class Home extends Component {
             onScroll={this.handleVideoScroll}
           >
             <div className=' container hero base parallax__layer parallax__layer--base'>
-              <div className='wrapper'>
+              <div className='wrapper wrapper-header'>
                 <div className='hero-copy'>
                   <div>
                     <h1>
@@ -75,12 +75,10 @@ class Home extends Component {
                     <p>
                       Develop your surf skills on land. Carve, trim, cutbacks,
                       snaps: Improve your technique. Shred the wave you create.
-                      <br />
-                      {this.state.scrollTop}
                     </p>
                     <button className='primary-button'>
                       <Link to='/product' className='Link'>
-                        Buy now
+                        ORDER
                       </Link>
                     </button>
                   </div>

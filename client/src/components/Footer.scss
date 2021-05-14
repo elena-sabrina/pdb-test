@@ -1,14 +1,15 @@
 @import "./../styles/General.scss";
 
 .footer {
-  background-color: $black;
+  background-color: $dark-black;
   color: white;
   padding: 30px 0 100px 0;
   margin: 0 0 0 0 !important;
 }
 
-h5 {
-  font-weight: 800;
+h4 {
+  font-weight: 800 !important;
+  padding: 2em 0 0 0 !important;
 }
 
 p {
@@ -29,15 +30,44 @@ p-adding-line-height {
 }
 
 .about {
-  grid-column: 7/10;
+  grid-column: 7/11;
+
   grid-row: 1/2;
   display: flex;
   flex-direction: column;
   .links {
     display: flex;
     flex-direction: row;
-    p {
+    a {
       padding: 0 10px 0 0;
+      text-decoration: none;
+      color: white;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 0.8em !important;
+      margin: 0 0 0.6em 0;
+      line-height: 1.8em !important;
     }
+    a:hover {
+      transform: scale(1.08);
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .adress {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 4em;
+  }
+
+  .about {
+    margin: 0 -15px 0 0;
+    padding: 0 4em;
+  }
+  h4 {
+    font-size: 1em !important;
   }
 }

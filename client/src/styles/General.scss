@@ -14,6 +14,7 @@ $font-family: "Comfortaa", cursive;
 
 $grey: #81899b;
 $black: #2e323b;
+$dark-black: #23262c;
 $yellow: #dfa612;
 $white: #fcfcfc;
 
@@ -89,14 +90,17 @@ a {
   font-family: $font-family;
   font-weight: 600;
   line-height: 1.4em;
-  font-size: 1em;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
 }
 
 button {
   font-family: $font-family;
   font-weight: 600;
+  letter-spacing: 10%;
   line-height: 1.4em;
   font-size: 1em;
+  letter-spacing: 0.1em;
 }
 
 //MOBILE
@@ -121,18 +125,26 @@ button {
 
 .TeaserButton {
   div {
-    grid-column: 1 / 13;
+    grid-column: 3 / 11;
     grid-row: 1 / 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 6em 0 3em 0;
+
+    h2 {
+      padding: 2em;
+      text-align: center;
+      line-height: 1.6;
+    }
   }
 }
 
 .primary-button {
-  width: 100px;
-  height: 40px;
+  //width: 100px;
+  height: 2.5em;
+  padding: 0.2em 0.8em;
   background-color: $black;
   border: none;
   outline: none;
@@ -197,11 +209,22 @@ $mobile: 600px;
     .wrapper {
       display: grid;
       display: flex;
-      flex-direction: column-reverse;
-
+      flex-direction: column;
       grid-gap: 30px;
-
       margin: 0;
+    }
+    .wrapper-header {
+      flex-direction: column-reverse !important;
+    }
+  }
+  .TeaserButton {
+    div {
+      padding: 2em 0 2em 0;
+
+      h2 {
+        padding: 2em;
+        font-size: 1.2em;
+      }
     }
   }
 }

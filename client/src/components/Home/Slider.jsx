@@ -106,26 +106,72 @@ class Slider extends Component {
               </div>
             </div>
 
-            <div className='teaser-slider'>
-              <button className='slider-button' onClick={this.decrementCount}>
-                <img src={arrowleft} alt='arrow-left' />
-              </button>
+            {(image === 1 && (
+              <div className='teaser-slider image1'>
+                <button className='slider-button' onClick={this.decrementCount}>
+                  <img src={arrowleft} alt='arrow-left' />
+                </button>
 
-              <div className='slideshow-container'>
-                <div className='mySlides slide-1'>
-                  {(image === 1 && (
-                    <img src={screenshotwheel} alt='wheelimage' />
-                  )) ||
-                    (image === 2 && <img src={wheel} alt='wheelimage' />) ||
-                    (image === 3 && <img src={wheel2} alt='wheelimage' />) ||
-                    (image === 4 && <img src={wheel1} alt='wheelimage' />)}
-                </div>
+                <div className='slideshow-container'></div>
+                <button className='slider-button' onClick={this.incrementCount}>
+                  <img src={arrowright} alt='arrow-right' />
+                </button>
               </div>
+            )) ||
+              (image === 2 && (
+                <div className='teaser-slider image2'>
+                  <button
+                    className='slider-button'
+                    onClick={this.decrementCount}
+                  >
+                    <img src={arrowleft} alt='arrow-left' />
+                  </button>
 
-              <button className='slider-button' onClick={this.incrementCount}>
-                <img src={arrowright} alt='arrow-right' />
-              </button>
-            </div>
+                  <div className='slideshow-container'></div>
+                  <button
+                    className='slider-button'
+                    onClick={this.incrementCount}
+                  >
+                    <img src={arrowright} alt='arrow-right' />
+                  </button>
+                </div>
+              )) ||
+              (image === 3 && (
+                <div className='teaser-slider image3'>
+                  <button
+                    className='slider-button'
+                    onClick={this.decrementCount}
+                  >
+                    <img src={arrowleft} alt='arrow-left' />
+                  </button>
+
+                  <div className='slideshow-container'></div>
+                  <button
+                    className='slider-button'
+                    onClick={this.incrementCount}
+                  >
+                    <img src={arrowright} alt='arrow-right' />
+                  </button>
+                </div>
+              )) ||
+              (image === 4 && (
+                <div className='teaser-slider image4'>
+                  <button
+                    className='slider-button'
+                    onClick={this.decrementCount}
+                  >
+                    <img src={arrowleft} alt='arrow-left' />
+                  </button>
+
+                  <div className='slideshow-container'></div>
+                  <button
+                    className='slider-button'
+                    onClick={this.incrementCount}
+                  >
+                    <img src={arrowright} alt='arrow-right' />
+                  </button>
+                </div>
+              ))}
           </div>
         </div>
       </div>

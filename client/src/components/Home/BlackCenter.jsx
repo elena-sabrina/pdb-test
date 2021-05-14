@@ -12,9 +12,9 @@ class BlackCenter extends Component {
             <h5>Skate your wave.</h5>
             <h4>
               We design your pdb surfskate to emulate your surf. Improve. Get
-              that infinite riding thrill.
-              <h5>Improve your surf.</h5>
+              that infinite riding thrill.{" "}
             </h4>
+            <h5>Improve your surf.</h5>
           </div>
         </div>
       </div>

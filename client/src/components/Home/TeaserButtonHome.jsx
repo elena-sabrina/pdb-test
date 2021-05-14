@@ -9,9 +9,13 @@ class TeaserButtonHome extends Component {
       <div className='container'>
         <div className='wrapper TeaserButton'>
           <div>
+            <h2>
+              This is an animating copy so they click on the button. It'
+              important.
+            </h2>
             <button className='primary-button'>
               <Link to='/product' className='Link'>
-                Buy now
+                ORDER
               </Link>
             </button>
           </div>
