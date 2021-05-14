@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./TeaserButton.scss";
+import "./../../styles/General.scss";
 
-class TeaserButton extends Component {
+class TeaserButtonHome extends Component {
   render() {
     return (
       <div className='container'>
         <div className='wrapper TeaserButton'>
           <div>
-            <button>
+            <button className='primary-button'>
               <Link to='/product' className='Link'>
                 Buy now
               </Link>
@@ -21,4 +21,4 @@ class TeaserButton extends Component {
   }
 }
 
-export default TeaserButton;
+export default TeaserButtonHome;

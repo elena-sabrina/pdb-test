@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import wheel from "./../../styles/images/wheel.png";
 import wheel1 from "./../../styles/images/wheel1.jpg";
 import wheel2 from "./../../styles/images/wheel2.jpg";
+import screenshotwheelwide from "./../../styles/images/screenshotwheelwide.png";
+import screenshotwheel from "./../../styles/images/screenshotwheel.png";
 import arrowright from "./../../styles/images/arrow-right.svg";
 import arrowleft from "./../../styles/images/arrow-left.svg";
 import "./Slider.scss";
@@ -104,20 +107,22 @@ class Slider extends Component {
             </div>
 
             <div className='teaser-slider'>
-              <button onClick={this.decrementCount}>
+              <button className='slider-button' onClick={this.decrementCount}>
                 <img src={arrowleft} alt='arrow-left' />
               </button>
 
               <div className='slideshow-container'>
                 <div className='mySlides slide-1'>
-                  {(image === 1 && <img src={wheel} alt='wheelimage' />) ||
-                    (image === 2 && <img src={wheel1} alt='wheelimage' />) ||
+                  {(image === 1 && (
+                    <img src={screenshotwheel} alt='wheelimage' />
+                  )) ||
+                    (image === 2 && <img src={wheel} alt='wheelimage' />) ||
                     (image === 3 && <img src={wheel2} alt='wheelimage' />) ||
                     (image === 4 && <img src={wheel1} alt='wheelimage' />)}
                 </div>
               </div>
 
-              <button onClick={this.incrementCount}>
+              <button className='slider-button' onClick={this.incrementCount}>
                 <img src={arrowright} alt='arrow-right' />
               </button>
             </div>

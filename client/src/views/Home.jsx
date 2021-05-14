@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import testvideo from "./../styles/images/scrollvideo/testvideo.mp4";
 import image1 from "./../styles/images/scrollvideo/image1.png";
@@ -10,7 +11,7 @@ import BlackCenter from "./../components/Home/BlackCenter";
 import TrucksSpecial from "./../components/Home/TrucksSpecial";
 import TeaserTwo from "./../components/Home/TeaserTwo";
 import Slider from "../components/Home/Slider";
-import TeaserButton from "../components/Home/TeaserButton";
+import TeaserButtonHome from "../components/Home/TeaserButtonHome";
 
 import "./Home.scss";
 
@@ -77,6 +78,11 @@ class Home extends Component {
                       <br />
                       {this.state.scrollTop}
                     </p>
+                    <button className='primary-button'>
+                      <Link to='/product' className='Link'>
+                        Buy now
+                      </Link>
+                    </button>
                   </div>
                 </div>
                 <div className='video intro'>
@@ -102,7 +108,7 @@ class Home extends Component {
           image={this.state.image}
           onImageChange={this.handleImageChange}
         />
-        <TeaserButton />
+        <TeaserButtonHome />
       </div>
     );
   }

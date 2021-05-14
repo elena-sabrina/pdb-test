@@ -80,6 +80,7 @@ class Hero extends Component {
                 Develop your surf skills on land. Carve, trim, cutbacks, snaps:
                 Improve your technique. Shred the wave you create.
               </p>
+             
             </div>
           </div>
           <div className='video intro'>

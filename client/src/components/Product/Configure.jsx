@@ -242,10 +242,10 @@ class Configure extends Component {
           <div className='wrapper TeaserButton'>
             <div>
               <button
-                className='choose-type-teaser type-two'
+                className='primary-button '
                 onClick={this.handleConfigureChange}
               >
-                Buuuuuuuttton
+                Select
               </button>
             </div>
           </div>

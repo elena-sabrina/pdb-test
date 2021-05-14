@@ -17,6 +17,16 @@ $black: #2e323b;
 $yellow: #dfa612;
 $white: #fcfcfc;
 
+html,
+body {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: $font-family;
+}
+
 //-----------FONTS-----------//
 
 //DESKTOP
@@ -74,6 +84,20 @@ p {
   margin: 0 0 0.5em 0;
 }
 
+a {
+  font-family: $font-family;
+  font-weight: 600;
+  line-height: 1.4em;
+  font-size: 1em;
+}
+
+button {
+  font-family: $font-family;
+  font-weight: 600;
+  line-height: 1.4em;
+  font-size: 1em;
+}
+
 //MOBILE
 @media only screen and (max-width: 600px) {
   h1 {
@@ -87,6 +111,49 @@ p {
   h5 {
     font-size: 0.6em;
     margin: 0 0 1em 0;
+  }
+}
+
+//-----------BUTTONS-----------//
+
+//TABLET
+
+.TeaserButton {
+  div {
+    grid-column: 1 / 13;
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+.primary-button {
+  width: 100px;
+  height: 40px;
+  background-color: $black;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.primary-button:hover {
+  background-color: white;
+  color: $black;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+  a {
+    color: $black;
   }
 }
 
@@ -138,76 +205,6 @@ $mobile: 600px;
   }
 }
 
-//-----------OLD-----------//
-
-@mixin grid-box {
-  padding: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@mixin grid-hero {
-  padding: 30px;
-  margin: 0 auto;
-}
-
-@mixin center-content {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@mixin h1-style {
-  font-family: $font-family;
-  font-weight: 500;
-  line-height: 1em;
-  font-size: 4.5em;
-}
-
-@mixin h2-style {
-  font-family: $font-family;
-  font-weight: 200;
-  line-height: 1em;
-  font-size: 3em;
-}
-@mixin h3-style {
-  font-family: $font-family;
-  font-weight: 200;
-  line-height: 1em;
-  font-size: 2em;
-}
-
-@mixin h4-style {
-  font-family: $font-family;
-  font-weight: 100;
-  line-height: 1em;
-  font-size: 1.2em;
-}
-
-@mixin p-style {
-  font-family: $font-family;
-  font-weight: 200;
-  line-height: 1.4em;
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  box-sizing: border-box;
-  margin: 0 0;
-  padding: 0;
-  //background-color: rgb(224, 224, 224);
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: $font-family;
-}
-
 .Scroll {
-  //border: 1px solid black;
-  //width: 1200px;
-  //height: 500px;
   overflow: scroll;
 }

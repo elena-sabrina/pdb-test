@@ -55,14 +55,13 @@
     }
   }
 }
-
-button {
+.slider-button {
   background-color: transparent;
   border: none;
   outline: none;
   height: 4em;
 }
-button:hover {
+.slider-button:hover {
   transform: scale(1.2);
   transition: all 0.5s ease;
 }
