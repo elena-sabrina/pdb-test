@@ -47,7 +47,6 @@ export class App extends Component {
       <BrowserRouter className='App'>
         <>
           <Navbar />
-
           <Switch>
             <Route path='/' component={Home} exact />
             <Route
@@ -60,7 +59,7 @@ export class App extends Component {
               )}
               exact
             />
-             <Route
+            <Route
               path='/product/checkout/:id'
               render={(props) => (
                 <Checkout {...props} order={this.state.order} />
