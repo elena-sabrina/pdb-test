@@ -6,7 +6,7 @@ import wheel from "./../../styles/images/wheel.png";
 
 import "./ChooseWheels.scss";
 import "./ChooseType.scss";
-import "./../Checkout/Summary.scss";
+import "./Summary.scss";
 
 class Configure extends Component {
   constructor(props) {
@@ -63,53 +63,56 @@ class Configure extends Component {
               </div>
             </div>
 
-            <div className="types">
+            <div className='types'>
+              <button
+                className='choose-type-teaser type-one'
+                onClick={() => this.handleTypeChange("echo")}
+              >
+                {(typestate === "echo" && (
+                  <div className='selected-type'>
+                    <div className='choose-type-box'>
+                      <img src={ECHO} alt='surfskateimage' />
+                      <h4>ECHO</h4>
+                      <p>Your hybrid PDB.</p>
+                      <p>2.500.000 IDR</p>
+                    </div>
+                  </div>
+                )) || (
+                  <div className='not-selected-type'>
+                    <div className='choose-type-box'>
+                      <img src={ECHO} alt='surfskateimage' />
+                      <h4>ECHO</h4>
+                      <p>Your hybrid PDB.</p>
+                      <p>2.500.000 IDR</p>
+                    </div>
+                  </div>
+                )}
+              </button>
 
-            <button
-              className='choose-type-teaser type-one'
-              onClick={() => this.handleTypeChange("echo")}
-            >
-              {(typestate === "echo" && (
-                <div className='selected-type'>
-                  <div className='choose-type-box'>
-                    <img src={ECHO} alt='surfskateimage' />
-                    <h4>ECHO</h4>
-                    <p>Your hybrid PDB.</p>
+              <button
+                className='choose-type-teaser type-two'
+                onClick={() => this.handleTypeChange("ulu")}
+              >
+                {(typestate === "ulu" && (
+                  <div className='selected-type'>
+                    <div className='choose-type-box'>
+                      <img src={ULU} alt='surfskateimage' />
+                      <h4>ULU</h4>
+                      <p>Your advanced PDB.</p>
+                      <p>2.500.000 IDR</p>
+                    </div>
                   </div>
-                </div>
-              )) || (
-                <div className='not-selected-type'>
-                  <div className='choose-type-box'>
-                    <img src={ECHO} alt='surfskateimage' />
-                    <h4>ECHO</h4>
-                    <p>Your hybrid PDB.</p>
+                )) || (
+                  <div className='not-selected-type'>
+                    <div className='choose-type-box'>
+                      <img src={ULU} alt='surfskateimage' />
+                      <h4>ULU</h4>
+                      <p>Your advanced PDB.</p>
+                      <p>2.500.000 IDR</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </button>
-
-            <button
-              className='choose-type-teaser type-two'
-              onClick={() => this.handleTypeChange("ulu")}
-            >
-              {(typestate === "ulu" && (
-                <div className='selected-type'>
-                  <div className='choose-type-box'>
-                    <img src={ULU} alt='surfskateimage' />
-                    <h4>ULU</h4>
-                    <p>Your advanced PDB.</p>
-                  </div>
-                </div>
-              )) || (
-                <div className='not-selected-type'>
-                  <div className='choose-type-box'>
-                    <img src={ULU} alt='surfskateimage' />
-                    <h4>ULU</h4>
-                    <p>Your advanced PDB.</p>
-                  </div>
-                </div>
-              )}
-            </button>
+                )}
+              </button>
             </div>
           </div>
         </div>
@@ -118,93 +121,94 @@ class Configure extends Component {
             <div className='choose-wheels-title'>
               <div>
                 <h2>Wheels</h2>
-                Choose <br />
+                Choose {wheelstate}
+                <br />
               </div>
             </div>
-<div className="wheels">
-            <button
-              className='choose-wheels-teaser wheel-one'
-              onClick={() => this.handleWheelChange("white")}
-            >
-              {(wheelstate === "white" && (
-                <div className='selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>White</p>
+            <div className='wheels'>
+              <button
+                className='choose-wheels-teaser wheel-one'
+                onClick={() => this.handleWheelChange("white")}
+              >
+                {(wheelstate === "white" && (
+                  <div className='selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>White</p>
+                    </div>
                   </div>
-                </div>
-              )) || (
-                <div className='not-selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>White</p>
+                )) || (
+                  <div className='not-selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>White</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </button>
+                )}
+              </button>
 
-            <button
-              className='choose-wheels-teaser wheel-two'
-              onClick={() => this.handleWheelChange("green")}
-            >
-              {(wheelstate === "green" && (
-                <div className='selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Green</p>
+              <button
+                className='choose-wheels-teaser wheel-two'
+                onClick={() => this.handleWheelChange("green")}
+              >
+                {(wheelstate === "green" && (
+                  <div className='selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Green</p>
+                    </div>
                   </div>
-                </div>
-              )) || (
-                <div className='not-selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Green</p>
+                )) || (
+                  <div className='not-selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Green</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </button>
+                )}
+              </button>
 
-            <button
-              className='choose-wheels-teaser wheel-three'
-              onClick={() => this.handleWheelChange("red")}
-            >
-              {(wheelstate === "red" && (
-                <div className='selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Red</p>
+              <button
+                className='choose-wheels-teaser wheel-three'
+                onClick={() => this.handleWheelChange("red")}
+              >
+                {(wheelstate === "red" && (
+                  <div className='selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Red</p>
+                    </div>
                   </div>
-                </div>
-              )) || (
-                <div className='not-selected-wheels'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Red</p>
+                )) || (
+                  <div className='not-selected-wheels'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Red</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </button>
+                )}
+              </button>
 
-            <button
-              className='choose-wheels-teaser wheel-four'
-              onClick={() => this.handleWheelChange("black")}
-            >
-              {(wheelstate === "black" && (
-                <div className='selected'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Black</p>
+              <button
+                className='choose-wheels-teaser wheel-four'
+                onClick={() => this.handleWheelChange("black")}
+              >
+                {(wheelstate === "black" && (
+                  <div className='selected'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Black</p>
+                    </div>
                   </div>
-                </div>
-              )) || (
-                <div className='not-selected'>
-                  <div className='choose-wheels-box'>
-                    <img src={wheel} alt='surfskateimage' />
-                    <p>Black</p>
+                )) || (
+                  <div className='not-selected'>
+                    <div className='choose-wheels-box'>
+                      <img src={wheel} alt='surfskateimage' />
+                      <p>Black</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </button>
+                )}
+              </button>
             </div>
           </div>
         </div>
@@ -213,11 +217,12 @@ class Configure extends Component {
           <div className='wrapper'>
             <div className='summary-title'>
               <div>
-                <h2>Summary</h2>
+                <h2>Your Order</h2>
 
-                <p>...</p>
+                <p>Please your selection before submitting your order. </p>
               </div>
             </div>
+
             <div className='summary'>
               <table>
                 <tr>
@@ -225,21 +230,21 @@ class Configure extends Component {
                   <td>{typestate}</td>
                 </tr>
                 <tr>
-                  <td>Wheels: </td>
+                  <td className='underline'>Wheels: </td>
                   <td>{wheelstate}</td>
                 </tr>
-                <hr />
+
                 <tr>
                   <td>Total</td>
                   {(typestate && <td>2500.000 IDR</td>) || <td></td>}
                 </tr>
-                <button
-                  className='primary-button '
-                  onClick={this.handleConfigureChange}
-                >
-                  Select
-                </button>
               </table>
+              <button
+                className='primary-button '
+                onClick={this.handleConfigureChange}
+              >
+                ORDER
+              </button>
             </div>
           </div>
         </div>

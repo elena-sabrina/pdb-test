@@ -79,15 +79,7 @@ class Navbar extends Component {
                         Order
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to='/about'
-                        className='Link'
-                        onClick={this.handleHamburgerClick}
-                      >
-                        About
-                      </Link>
-                    </li>
+
                     <li>
                       <Link
                         to='/contact'

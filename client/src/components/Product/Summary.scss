@@ -7,7 +7,7 @@
 
 //TABLET
 .summary-title {
-  grid-column: 1 / 5;
+  grid-column: 1 / 7;
   grid-row: 1 / 2;
 
   display: flex;
@@ -17,9 +17,17 @@
 
 .summary {
   grid-column: 2 / 9;
-  grid-row: 2 / 4;
+  grid-row: 2 / 3;
 
   // padding: 0 0 1em 0;
+}
+
+td {
+  padding: 0.5em 0;
+}
+
+table {
+  margin: 1em 0;
 }
 
 //MOBILE

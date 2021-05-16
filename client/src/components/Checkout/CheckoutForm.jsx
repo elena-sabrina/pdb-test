@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import "./Checkoutform.scss";
+
 class Checkoutform extends Component {
   constructor(props) {
     super(props);
@@ -32,67 +34,67 @@ class Checkoutform extends Component {
     return (
       <div>
         <div className='container'>
-          <div className='wrapper'>
-            <div className='title'>
+          <div className='wrapper form-wrapper'>
+            <div className='form-title'>
               <div>
                 <h2>Personal Details</h2>
 
-                <p>...</p>
+                <p>
+                  Thank you for your order. Tell us a bit more about yourself.
+                </p>
               </div>
             </div>
-            <form className='teaser-one'>
+
+            <form className='form'>
               <div>
-                <h4>Name</h4>
+                <h4> How can we reach you?</h4>
+    
 
                 <input
+                  placeholder='Name'
                   id='input-name'
                   name='name'
                   type='text'
-                  placeholder='Name'
                   value={this.state.name}
                   onChange={this.handleInputChange}
                   required
                 />
-              </div>
-              <div>
-                <h4>Email</h4>
+
+        
 
                 <input
+                placeholder='Email'
                   id='input-email'
                   name='email'
                   type='text'
-                  placeholder='Email'
                   value={this.state.email}
                   onChange={this.handleInputChange}
                   required
                 />
               </div>
               <div>
-                <h4>Location</h4>
+                <h4>Where should we send your order?</h4>
 
-                <input
+                <textarea
                   id='input-adress'
                   name='adress'
                   type='text'
-                  placeholder='Adress'
+                  rows='4'
+                  cols='50'
                   value={this.state.adress}
                   onChange={this.handleInputChange}
                   required
                 />
               </div>
+              <div>
+                <button
+                  className='primary-button'
+                  onClick={this.handleCheckoutChange}
+                >
+                  SEND ORDER
+                </button>
+              </div>
             </form>
-          </div>
-        </div>
-        <div className='container'>
-          <div className='wrapper TeaserButton'>
-            <div>
-              <button
-                className='choose-type-teaser type-two'
-                onClick={this.handleCheckoutChange}
-              >
-                Buuuuuuuttton
-              </button>
-            </div>
           </div>
         </div>
       </div>

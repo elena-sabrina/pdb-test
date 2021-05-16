@@ -38,9 +38,7 @@ class Footer extends Component {
               <Link to='/product' className='Link'>
                 Order
               </Link>
-              <Link to='/about' className='Link'>
-                About
-              </Link>
+
               <Link to='/contact' className='Link'>
                 Contact
               </Link>

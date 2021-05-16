@@ -12,7 +12,6 @@ import Home from "./views/Home";
 import Product from "./views/Product";
 import Checkout from "./views/Checkout";
 import Confirmation from "./views/Confirmation";
-import About from "./views/About";
 import Contact from "./views/Contact";
 import Scrolltest from "./views/Scrolltest";
 
@@ -75,7 +74,6 @@ export class App extends Component {
               exact
             />
 
-            <Route path='/about' component={About} exact />
             <Route path='/contact' component={Contact} exact />
             <Route path='/scrolltest' component={Scrolltest} exact />
           </Switch>
