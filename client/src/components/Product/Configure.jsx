@@ -4,8 +4,8 @@ import ECHO from "./../../styles/images/ECHO.png";
 import ULU from "./../../styles/images/ULU.png";
 import wheel from "./../../styles/images/wheel.png";
 
-import "./ChooseType.scss";
 import "./ChooseWheels.scss";
+import "./ChooseType.scss";
 import "./../Checkout/Summary.scss";
 
 class Configure extends Component {
@@ -45,9 +45,8 @@ class Configure extends Component {
   };
 
   render() {
-    const typeprops = this.props.type;
     const typestate = this.state.type;
-    const wheelprops = this.props.wheel;
+
     const wheelstate = this.state.wheel;
 
     return (
@@ -60,17 +59,18 @@ class Configure extends Component {
 
                 <p>
                   Choose <br />
-                  Props:...{typeprops} <br />
-                  State:...{typestate}
                 </p>
               </div>
             </div>
+
+            <div className="types">
+
             <button
               className='choose-type-teaser type-one'
               onClick={() => this.handleTypeChange("echo")}
             >
               {(typestate === "echo" && (
-                <div className='selected'>
+                <div className='selected-type'>
                   <div className='choose-type-box'>
                     <img src={ECHO} alt='surfskateimage' />
                     <h4>ECHO</h4>
@@ -78,7 +78,7 @@ class Configure extends Component {
                   </div>
                 </div>
               )) || (
-                <div className='not-selected'>
+                <div className='not-selected-type'>
                   <div className='choose-type-box'>
                     <img src={ECHO} alt='surfskateimage' />
                     <h4>ECHO</h4>
@@ -93,7 +93,7 @@ class Configure extends Component {
               onClick={() => this.handleTypeChange("ulu")}
             >
               {(typestate === "ulu" && (
-                <div className='selected'>
+                <div className='selected-type'>
                   <div className='choose-type-box'>
                     <img src={ULU} alt='surfskateimage' />
                     <h4>ULU</h4>
@@ -101,7 +101,7 @@ class Configure extends Component {
                   </div>
                 </div>
               )) || (
-                <div className='not-selected'>
+                <div className='not-selected-type'>
                   <div className='choose-type-box'>
                     <img src={ULU} alt='surfskateimage' />
                     <h4>ULU</h4>
@@ -110,6 +110,7 @@ class Configure extends Component {
                 </div>
               )}
             </button>
+            </div>
           </div>
         </div>
         <div className='container'>
@@ -118,24 +119,22 @@ class Configure extends Component {
               <div>
                 <h2>Wheels</h2>
                 Choose <br />
-                Props:...{wheelprops} <br />
-                State:...{wheelstate}
               </div>
             </div>
-
+<div className="wheels">
             <button
               className='choose-wheels-teaser wheel-one'
               onClick={() => this.handleWheelChange("white")}
             >
-              {(wheelprops === "white" && (
-                <div className='selected'>
+              {(wheelstate === "white" && (
+                <div className='selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>White</p>
                   </div>
                 </div>
               )) || (
-                <div className='not-selected'>
+                <div className='not-selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>White</p>
@@ -148,15 +147,15 @@ class Configure extends Component {
               className='choose-wheels-teaser wheel-two'
               onClick={() => this.handleWheelChange("green")}
             >
-              {(wheelprops === "green" && (
-                <div className='selected'>
+              {(wheelstate === "green" && (
+                <div className='selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>Green</p>
                   </div>
                 </div>
               )) || (
-                <div className='not-selected'>
+                <div className='not-selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>Green</p>
@@ -169,15 +168,15 @@ class Configure extends Component {
               className='choose-wheels-teaser wheel-three'
               onClick={() => this.handleWheelChange("red")}
             >
-              {(wheelprops === "red" && (
-                <div className='selected'>
+              {(wheelstate === "red" && (
+                <div className='selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>Red</p>
                   </div>
                 </div>
               )) || (
-                <div className='not-selected'>
+                <div className='not-selected-wheels'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
                     <p>Red</p>
@@ -190,7 +189,7 @@ class Configure extends Component {
               className='choose-wheels-teaser wheel-four'
               onClick={() => this.handleWheelChange("black")}
             >
-              {(wheelprops === "black" && (
+              {(wheelstate === "black" && (
                 <div className='selected'>
                   <div className='choose-wheels-box'>
                     <img src={wheel} alt='surfskateimage' />
@@ -206,6 +205,7 @@ class Configure extends Component {
                 </div>
               )}
             </button>
+            </div>
           </div>
         </div>
 
@@ -221,32 +221,25 @@ class Configure extends Component {
             <div className='summary'>
               <table>
                 <tr>
-                  <td>Type: {typestate}</td>
-                  <td>200.000 IDR</td>
+                  <td>Type: </td>
+                  <td>{typestate}</td>
                 </tr>
                 <tr>
-                  <td>Wheels: {wheelstate}</td>
-                  <td>50.000 IDR</td>
+                  <td>Wheels: </td>
+                  <td>{wheelstate}</td>
                 </tr>
                 <hr />
                 <tr>
                   <td>Total</td>
-                  <td>250.000 IDR</td>
+                  {(typestate && <td>2500.000 IDR</td>) || <td></td>}
                 </tr>
+                <button
+                  className='primary-button '
+                  onClick={this.handleConfigureChange}
+                >
+                  Select
+                </button>
               </table>
-            </div>
-          </div>
-        </div>
-
-        <div className='container'>
-          <div className='wrapper TeaserButton'>
-            <div>
-              <button
-                className='primary-button '
-                onClick={this.handleConfigureChange}
-              >
-                Select
-              </button>
             </div>
           </div>
         </div>

@@ -10,29 +10,53 @@
 }
 
 //TABLET
+
 .choose-type-title {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
 
-  display: flex;
-  align-items: flex-end;
-  padding: 0 0 1em 0;
+  p {
+    margin: 0;
+  }
 }
 
+.types {
+  grid-column: 2 / 13;
+  grid-row: 2 / 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 .choose-type-teaser {
+  background-color: white;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 1em 0;
+  margin: 0 2em 0 0;
+}
+
+.not-selected-type {
+  padding: 2em 1em 0.5em 1em;
+}
+
+.choose-type-box {
+  padding: 1em 1em 2em 1em;
+}
+.selected-type {
+  background-color: #e5e5e5;
+  box-shadow: 0px 4px 15px 0px #00000033;
+  border-radius: 1px;
+  padding: 2em 1em 0.5em 1em;
 }
 
 .choose-type-teaser:hover {
-  transform: scale(1);
-  .not-selected {
+  .not-selected-type {
     background-color: #e5e5e5;
-    padding: 20px 10px;
     box-shadow: 0px 4px 15px 0px #00000033;
     border-radius: 1px;
+    padding: 2em 1em 0.5em 1em;
   }
 }
 
@@ -65,17 +89,6 @@ img {
   height: 100%;
 }
 
-.not-selected {
-  padding: 20px 10px;
-}
-
-.selected {
-  background-color: #e5e5e5;
-  padding: 20px 10px;
-  box-shadow: 0px 4px 15px 0px #00000033;
-  border-radius: 1px;
-}
-
 //MOBILE
 @media only screen and (max-width: $mobile) {
   .choose-type-title {
@@ -83,13 +96,37 @@ img {
     align-items: flex-end;
     padding: 2em 2em 0 2em;
   }
-  .choose-type-teaser-one {
-    display: flex;
-    align-items: flex-end;
-    padding: 2em;
-  }
 
-  .choose-type-teaser-two {
-    margin: 0 -15px 0 0;
+  .types {
+    grid-column: 2 / 8;
+
+    display: flex;
+    flex-direction: row !important;
+    transform: scale(0.8);
+    justify-content: start;
+
+    img {
+      display: none;
+    }
+    .choose-type-box {
+      width: 10em;
+    }
+
+    .not-selected-type {
+      padding: 1em 0em 0.5em 0em;
+      max-height: 10em;
+    }
+
+    .choose-type-box {
+      padding: 0em 0em 2em 0em;
+      max-height: 10em;
+    }
+    .selected-type {
+      background-color: #e5e5e5;
+      box-shadow: 0px 4px 15px 0px #00000033;
+      border-radius: 1px;
+      padding: 1em 0em 0.5em 0em;
+      max-height: 10em;
+    }
   }
 }

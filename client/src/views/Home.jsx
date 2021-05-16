@@ -100,7 +100,7 @@ class Home extends Component {
             <BlackCenter />
           </div>
         </div>
-        <TrucksSpecial />
+
         <TeaserTwo />
         <Slider
           image={this.state.image}
