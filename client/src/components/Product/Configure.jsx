@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import ECHO from "./../../styles/images/ECHO.png";
-import ULU from "./../../styles/images/ULU.png";
+import ECHO from "./../../styles/images/ECHO.svg";
+import ULU from "./../../styles/images/ULU.svg";
 import wheel from "./../../styles/images/wheel.png";
 
 import "./ChooseWheels.scss";
@@ -58,7 +58,9 @@ class Configure extends Component {
                 <h2>Type</h2>
 
                 <p>
-                  Choose <br />
+                  Select one of our surfskate models to improve your surf.
+                  Remember the ulu model is for ... while the echo helps you
+                  improve.
                 </p>
               </div>
             </div>
@@ -69,20 +71,20 @@ class Configure extends Component {
                 onClick={() => this.handleTypeChange("echo")}
               >
                 {(typestate === "echo" && (
-                  <div className='selected-type'>
-                    <div className='choose-type-box'>
-                      <img src={ECHO} alt='surfskateimage' />
+                  <div className='selection selected-type'>
+                    <img src={ECHO} alt='surfskateimage' />
+                    <div>
                       <h4>ECHO</h4>
-                      <p>Your hybrid PDB.</p>
+                      <p className='p'>Your hybrid PDB.</p>
                       <p>2.500.000 IDR</p>
                     </div>
                   </div>
                 )) || (
-                  <div className='not-selected-type'>
-                    <div className='choose-type-box'>
-                      <img src={ECHO} alt='surfskateimage' />
+                  <div className='selection not-selected-type'>
+                    <img src={ECHO} alt='surfskateimage' />
+                    <div>
                       <h4>ECHO</h4>
-                      <p>Your hybrid PDB.</p>
+                      <p className='p'>Your hybrid PDB.</p>
                       <p>2.500.000 IDR</p>
                     </div>
                   </div>
@@ -94,21 +96,23 @@ class Configure extends Component {
                 onClick={() => this.handleTypeChange("ulu")}
               >
                 {(typestate === "ulu" && (
-                  <div className='selected-type'>
-                    <div className='choose-type-box'>
-                      <img src={ULU} alt='surfskateimage' />
+                  <div className='selection selected-type'>
+                    <img src={ULU} alt='surfskateimage' />
+                    <div>
                       <h4>ULU</h4>
-                      <p>Your advanced PDB.</p>
+                      <p className='p'>Your advanced PDB.</p>
                       <p>2.500.000 IDR</p>
                     </div>
                   </div>
                 )) || (
-                  <div className='not-selected-type'>
-                    <div className='choose-type-box'>
-                      <img src={ULU} alt='surfskateimage' />
-                      <h4>ULU</h4>
-                      <p>Your advanced PDB.</p>
-                      <p>2.500.000 IDR</p>
+                  <div className='selection not-selected-type'>
+                    <img src={ULU} alt='surfskateimage' />
+                    <div>
+                      <div>
+                        <h4>ULU</h4>
+                        <p className='p'>Your advanced PDB.</p>
+                        <p>2.500.000 IDR</p>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -121,7 +125,8 @@ class Configure extends Component {
             <div className='choose-wheels-title'>
               <div>
                 <h2>Wheels</h2>
-                Choose {wheelstate}
+                We choose the best wheeltype for you. Now you only need to
+                choose the color.
                 <br />
               </div>
             </div>

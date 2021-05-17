@@ -17,8 +17,9 @@
 }
 
 .form {
-  grid-column: 2 / 9;
+  grid-column: 2 / 12;
   grid-row: 2 / 6;
+  background-color: red;
 
   button {
     margin: 1em 0;
@@ -65,8 +66,8 @@ textarea {
   background-color: none;
   border: none;
   border-bottom: 1px solid black;
-  margin: 1em 0;
-  width: 24em;
+  margin: 1em 1em 1em 0;
+  width: 22em;
 }
 
 textarea:focus {

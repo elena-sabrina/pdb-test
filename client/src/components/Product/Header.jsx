@@ -14,8 +14,7 @@ class Header extends Component {
                 your Surfskate
               </h1>
               <p>
-                Jean.Now you can develop your surfing skills in and out of the
-                water. Improve your turns and learn to generate. Jean.
+                Choose your surfskate models and colors. Delivery only in Bali.
               </p>
             </div>
           </div>

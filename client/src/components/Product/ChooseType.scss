@@ -13,7 +13,7 @@
 
 .choose-type-title {
   grid-column: 1 / 5;
-  grid-row: 1 / 2;
+  grid-row: 1 / 1;
 
   p {
     margin: 0;
@@ -21,42 +21,45 @@
 }
 
 .types {
-  grid-column: 2 / 13;
-  grid-row: 2 / 6;
+  grid-column: 1 / 13;
+  grid-row: 2 / 4;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 .choose-type-teaser {
-  background-color: white;
+  background-color: transparent;
   border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 2em 0 0;
-}
-
-.not-selected-type {
-  padding: 2em 1em 0.5em 1em;
-}
-
-.choose-type-box {
-  padding: 1em 1em 2em 1em;
-}
-.selected-type {
-  background-color: #e5e5e5;
-  box-shadow: 0px 4px 15px 0px #00000033;
+  box-shadow: $boxshadow;
+  margin: 2em 1em 0.5em 1em;
   border-radius: 1px;
-  padding: 2em 1em 0.5em 1em;
+  padding: 0;
+  width: 600px;
+  p {
+    margin: 0;
+  }
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  div {
+    text-align: left;
+  }
+  img {
+    margin: 0em 1em 0em 0em;
+  }
+}
+
+.selected-type {
+  background-color: $grey;
 }
 
 .choose-type-teaser:hover {
   .not-selected-type {
-    background-color: #e5e5e5;
-    box-shadow: 0px 4px 15px 0px #00000033;
-    border-radius: 1px;
-    padding: 2em 1em 0.5em 1em;
+    background-color: $grey;
   }
 }
 
@@ -92,41 +95,41 @@ img {
 //MOBILE
 @media only screen and (max-width: $mobile) {
   .choose-type-title {
-    display: flex;
-    align-items: flex-end;
-    padding: 2em 2em 0 2em;
+    //  display: flex;
+    // align-items: flex-end;
+    padding: 0 2em 0 2em;
   }
 
   .types {
-    grid-column: 2 / 8;
+    grid-column: 1 / 4;
 
     display: flex;
-    flex-direction: row !important;
+    justify-content: center;
     transform: scale(0.8);
-    justify-content: start;
 
     img {
-      display: none;
+      margin: 0;
     }
-    .choose-type-box {
-      width: 10em;
+    .choose-type-teaser {
+      div {
+        h4 {
+          text-align: center;
+          margin: 1em 0;
+        }
+        p {
+          text-align: center;
+        }
+        .p {
+          display: none;
+        }
+      }
     }
 
-    .not-selected-type {
-      padding: 1em 0em 0.5em 0em;
-      max-height: 10em;
-    }
-
-    .choose-type-box {
-      padding: 0em 0em 2em 0em;
-      max-height: 10em;
-    }
-    .selected-type {
-      background-color: #e5e5e5;
-      box-shadow: 0px 4px 15px 0px #00000033;
-      border-radius: 1px;
-      padding: 1em 0em 0.5em 0em;
-      max-height: 10em;
+    .selection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
