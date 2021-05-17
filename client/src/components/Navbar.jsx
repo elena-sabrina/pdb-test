@@ -61,7 +61,7 @@ class Navbar extends Component {
               <div className='wrapper'>
                 <div className='flyout-body'>
                   <ul>
-                    <li>
+                    <li className='underline-navlinks'>
                       <Link
                         to='/'
                         className='Link'
@@ -70,7 +70,7 @@ class Navbar extends Component {
                         Home
                       </Link>
                     </li>
-                    <li>
+                    <li className='underline-navlinks'>
                       <Link
                         to='/product'
                         className='Link'
@@ -80,7 +80,7 @@ class Navbar extends Component {
                       </Link>
                     </li>
 
-                    <li>
+                    <li className='underline-navlinks'>
                       <Link
                         to='/contact'
                         className='Link'

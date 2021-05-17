@@ -12,27 +12,10 @@
 //TABLET
 .choose-wheels-title {
   grid-column: 1 / 5;
-  grid-row: 1 / 2;
+  grid-row: 1 / 1;
 
   display: flex;
   align-items: flex-end;
-}
-
-.choose-wheels-teaser {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-height: 10em;
-  width: 10em;
-  border: none;
-
-  img {
-    padding: 20px 5px;
-  }
-
-  margin: 0 1em;
-  background-color: transparent;
 }
 
 .wheels {
@@ -42,64 +25,48 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 1200px;
 }
 
-.selected-wheels {
-  background-color: $grey;
+.choose-wheels-teaser {
+  background-color: transparent;
+  box-shadow: $boxshadow;
+  width: 150px;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+.choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-height: 10em;
   width: 10em;
+  margin: 0 1em;
 
   img {
     padding: 20px 5px;
   }
-  margin: 0 1em;
- box-shadow: $boxshadow;
-  border-radius: 1px;
-}
-
-.choose-wheels-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  height: 12em;
-
-  img {
-    height: 100px;
-  }
-  margin: 0 1em;
-
   h4 {
     margin: 1em 0 0 0;
   }
 }
 
-img {
-  height: 100%;
+.selected-wheels {
+  background-color: $grey;
 }
 
 .choose-wheels-teaser:hover {
   .not-selected-wheels {
     background-color: $grey;
-    max-height: 10em;
-    width: 10em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      padding: 20px 5px;
-    }
-
-    box-shadow: $boxshadow;
-    border-radius: 1px;
   }
 }
 
-.wheel-one {
+/*.wheel-one {
   grid-column: 2 / 3;
   grid-row: 2 / 4;
 }
@@ -114,24 +81,29 @@ img {
 .wheel-four {
   grid-column: 5/6;
   grid-row: 2 / 4;
-}
+}*/
 
 //MOBILE
 @media only screen and (max-width: $mobile) {
-  .choose-wheel-title {
+  .choose-wheels-title {
     display: flex;
-    align-items: flex-end;
-    padding: 2em 2em 0 2em;
+    align-items: flex-start;
+    padding: 2em 2em 0 2em !important;
   }
 
   .wheels {
     display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0 0 0 -5.5em;
+    transform: scale(0.8);
   }
 
-  .choose-wheels-title {
-    padding: 2em;
+  .choose-wheels-teaser {
+    width: 180px;
+    margin: 0 1em 0 0 !important;
+  }
+  .choose {
+    padding: 1em;
+    width: 10em;
   }
 }

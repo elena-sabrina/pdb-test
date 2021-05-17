@@ -56,6 +56,9 @@
   ul {
     list-style-type: none;
     padding: 2em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   a {
     font-family: $font-family;
@@ -66,6 +69,10 @@
     padding: 0.2em 0;
     text-decoration: none;
     color: white;
+  }
+
+  a:hover {
+    color: $highlight;
   }
   li {
     text-decoration: none;
@@ -111,4 +118,43 @@
 
 .closeimage {
   margin: 1em;
+}
+
+.underline-navlinks {
+  display: table-cell;
+  position: relative;
+  //padding: 0px 0 15px 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-align: left;
+  margin: 0 !important ;
+
+  a {
+    //text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 200;
+    //letter-spacing: 0.15em;
+
+    display: inline-block;
+    //padding: 15px 5px 5px 0px;
+    position: relative;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: $highlight;
+
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after {
+    width: 100%;
+    left: 10;
+  }
 }

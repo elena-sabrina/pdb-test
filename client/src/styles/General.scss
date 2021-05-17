@@ -15,10 +15,12 @@ $boxshadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 $font-family: "Comfortaa", cursive;
 
 $grey: #f3f3f5;
+
 $black: #2e323b;
 $dark-black: #23262c;
-$yellow: #dfa612;
+$orange: #dfa612;
 $white: #fcfcfc;
+$highlight: #fce353;
 
 html,
 body {
@@ -28,6 +30,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: $font-family;
+  background-color: $white;
 }
 
 //-----------FONTS-----------//
@@ -154,6 +157,7 @@ button {
   height: 2.5em;
   padding: 0.2em 0.8em;
   background-color: $black;
+  box-shadow: $boxshadow;
   position: relative;
   border: none;
   outline: none;
@@ -170,12 +174,11 @@ button {
 }
 
 .primary-button:hover {
-  background-color: white;
-  color: $black;
+  background-color: $highlight;
+
   transform: scale(1.1);
   transition: all 0.5s ease;
   a {
-    color: white;
     text-decoration: none;
   }
 }
@@ -184,19 +187,19 @@ button {
   display: table-cell;
   position: relative;
   padding: 0px 0 15px 0;
-  background-color: white;
   text-decoration: none;
   outline: none;
   border: none;
   text-align: left;
   margin: 0 !important ;
+  background-color: white;
+
   a {
-    color: black;
     //text-transform: uppercase;
     text-decoration: none;
     font-weight: 400;
     //letter-spacing: 0.15em;
-
+    color: $black;
     display: inline-block;
     padding: 15px 5px 5px 0px;
     position: relative;
@@ -206,10 +209,11 @@ button {
     bottom: 0;
     content: "";
     display: block;
-    height: 1px;
+    height: 2px;
     left: 0;
     position: absolute;
-    background: black;
+    background: $highlight;
+
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
