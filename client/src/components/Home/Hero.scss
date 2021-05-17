@@ -4,8 +4,6 @@
 //DESKTOP
 
 @media only screen and (min-width: $desktop) {
- 
-
   .video {
     display: flex;
     justify-content: center;
@@ -68,18 +66,19 @@
   .hero-copy {
     display: flex;
     align-items: flex-end;
-    padding: 4em 2em 6em 2em;
+    padding: 3em 6em 6em 2em;
   }
 
   .intro {
-    height: 320px !important;
-    margin: 0 -15px 0 0;
+    height: 100px !important;
+    margin: 220px 2em 0 85px;
+   // box-shadow: 0 0 8px 8px white inset;
     img {
-      max-height: 400px;
-      width: 100%;
+      max-height: 24px;
+      //width: 100%;
     }
     video {
-      height: 600px;
+      height: 330px;
       width: 100%;
     }
   }
