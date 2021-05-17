@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./TeaserTwo.scss";
 
@@ -14,21 +15,31 @@ class TeaserTwo extends Component {
           </div>
           <div className='teaser-one'>
             <div>
-              <h4>ECHO</h4>
+              <h4 className='heavier'>ECHO</h4>
               <p>
                 Your hybrid PDB. Enhance your pumping and turns with a classic
                 skateboard feeling.
               </p>
+              <button className='underline-button'>
+                <Link to='/product' className='Link'>
+                  Order now
+                </Link>
+              </button>
             </div>
           </div>
 
           <div className='teaser-two'>
-            <h4>ULU</h4>
+            <h4 className='heavier'>ULU</h4>
 
             <p>
               Your advanced PDB. Perform radical turns and maneuvers with the
               most surf-like feeling.
             </p>
+            <button className='underline-button'>
+              <Link to='/product' className='Link'>
+                Order now
+              </Link>
+            </button>
           </div>
         </div>
       </div>
