@@ -37,11 +37,11 @@ class Checkout extends Component {
       adress
     };
     const order = await finalizeOrder(this.props.match.params.id, data);
-    console.log("order app:", order);
+    console.log("going to set state");
     this.setState({
       order
     });
-    console.log("order state app:", this.state.order);
+    console.log("going to REDIRECT");
     window.location.href = `/product/confirmation/${order._id}`;
   };
 
