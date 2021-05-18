@@ -216,21 +216,43 @@ class Configure extends Component {
             <div className='summary'>
               <table>
                 <tr>
-                  <td>Type: </td>
-                  <td>{typestate}</td>
+                  <td>
+                    <p>Type: </p>
+                  </td>
+                  <td className='right'>
+                    {(typestate && <p>{typestate}</p>) || <p>Select model</p>}
+                  </td>
                 </tr>
                 <tr>
-                  <td className='underline'>Wheels: </td>
-                  <td>{wheelstate}</td>
+                  <td className='underline'>
+                    <p>Wheels:</p>
+                  </td>
+                  <td className='right'>
+                    {(wheelstate && <p>{wheelstate}</p>) || (
+                      <p>Select wheels</p>
+                    )}
+                  </td>
                 </tr>
 
                 <tr>
-                  <td>Total</td>
-                  {(typestate && <td>2500.000 IDR</td>) || <td></td>}
+                  <td>
+                    <p>Total</p>
+                  </td>
+                  {(typestate && (
+                    <td className='right'>
+                      <p>2500.000 IDR</p>
+                    </td>
+                  )) || (
+                    <td>
+                      {" "}
+                      <p></p>
+                    </td>
+                  )}
                 </tr>
               </table>
+
               <button
-                className='primary-button '
+                className='summary-button primary-button '
                 onClick={this.handleConfigureChange}
               >
                 ORDER

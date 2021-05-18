@@ -34,21 +34,33 @@ class Order extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td>Type: ECHO</td>
+                  <td>
+                    <p>Type: ECHO</p>
+                  </td>
 
-                  <td>200.000 IDR</td>
+                  <td>
+                    <p>200.000 IDR</p>
+                  </td>
                 </tr>
                 <tr>
-                  <td>Wheels: Green</td>
+                  <td>
+                    <p>Wheels: Green</p>
+                  </td>
 
-                  <td>50.000 IDR</td>
+                  <td>
+                    <p>50.000 IDR</p>
+                  </td>
                 </tr>
                 <hr />
               </div>
               <tr>
-                <td>Total</td>
+                <td>
+                  <p>Total</p>
+                </td>
 
-                <td>250.000 IDR</td>
+                <td>
+                  <p>250.000 IDR</p>
+                </td>
               </tr>
             </table>
 

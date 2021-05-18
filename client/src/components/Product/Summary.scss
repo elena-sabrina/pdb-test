@@ -18,13 +18,35 @@
 .summary {
   grid-column: 4 / 10;
   grid-row: 2 / 3;
-  background-color: grey;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 4em;
 
   // padding: 0 0 1em 0;
 }
 
+.summary-button {
+  grid-row: 2 / 3;
+  margin: 0 1em !important;
+}
+
 td {
   padding: 0.5em 0;
+
+  height: 2em;
+
+  p {
+    font-size: 1em !important;
+    padding: 0 1em;
+  }
+}
+
+.right {
+  p {
+    text-align: right;
+  }
 }
 
 table {
