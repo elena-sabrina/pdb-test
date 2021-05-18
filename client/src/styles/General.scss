@@ -15,6 +15,7 @@ $boxshadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 $font-family: "Comfortaa", cursive;
 
 $grey: #f3f3f5;
+$grey-font: #a8a8a8;
 
 $black: #2e323b;
 $dark-black: #23262c;
@@ -165,6 +166,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 
   a {
     text-decoration: none;

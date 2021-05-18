@@ -9,18 +9,36 @@ class Checkoutform extends Component {
     this.state = {
       name: "",
       email: "",
-      adress: ""
+      receiver: "",
+      street: "",
+      city: ""
     };
   }
 
   handleCheckoutChange = () => {
-    const type = this.props.type;
-    const wheel = this.props.wheel;
-    const name = this.state.name;
-    const email = this.state.email;
-    const adress = this.state.adress;
-    console.log("handleConfigureChange", type, wheel, name, email, adress);
-    this.props.onCheckoutHasChanged(type, wheel, name, email, adress);
+    const { type, wheel } = this.props;
+
+    const { name, email, receiver, street, city } = this.state;
+
+    console.log(
+      "handleConfigureChange",
+      type,
+      wheel,
+      name,
+      email,
+      receiver,
+      street,
+      city
+    );
+    this.props.onCheckoutHasChanged(
+      type,
+      wheel,
+      name,
+      email,
+      receiver,
+      street,
+      city
+    );
   };
 
   handleInputChange = (event) => {
@@ -48,7 +66,6 @@ class Checkoutform extends Component {
             <form className='form'>
               <div>
                 <h4> How can we reach you?</h4>
-    
 
                 <input
                   placeholder='Name'
@@ -60,10 +77,8 @@ class Checkoutform extends Component {
                   required
                 />
 
-        
-
                 <input
-                placeholder='Email'
+                  placeholder='Email'
                   id='input-email'
                   name='email'
                   type='text'
@@ -74,18 +89,43 @@ class Checkoutform extends Component {
               </div>
               <div>
                 <h4>Where should we send your order?</h4>
-
-                <textarea
-                  id='input-adress'
-                  name='adress'
+                <input
+                  id='input-receiver'
+                  name='receiver'
                   type='text'
-                  rows='4'
+                  rows='1'
                   cols='50'
-                  value={this.state.adress}
+                  placeholder='Receiver / Villa name'
+                  value={this.state.receiver}
+                  onChange={this.handleInputChange}
+                  required
+                />
+                <br />
+                <input
+                  id='input-street'
+                  name='street'
+                  type='text'
+                  rows='1'
+                  cols='50'
+                  placeholder='Street name, number'
+                  value={this.state.street}
+                  onChange={this.handleInputChange}
+                  required
+                />
+                <br />
+                <input
+                  id='input-city'
+                  name='city'
+                  type='text'
+                  rows='1'
+                  cols='50'
+                  placeholder='Village, Districts, Regencies, Province'
+                  value={this.state.city}
                   onChange={this.handleInputChange}
                   required
                 />
               </div>
+
               <div>
                 <button
                   className='primary-button'

@@ -10,9 +10,9 @@ class Checkout extends Component {
   state = {
     type: "",
     wheel: "",
-    adress: "",
-    name: "",
-    email: ""
+    receiver: "",
+    street: "",
+    city: ""
   };
 
   async componentDidMount() {
@@ -27,14 +27,24 @@ class Checkout extends Component {
     console.log(this.state.type);
   }
 
-  handleFinalizeOrder = async (type, wheel, name, email, adress) => {
+  handleFinalizeOrder = async (
+    type,
+    wheel,
+    name,
+    email,
+    receiver,
+    street,
+    city
+  ) => {
     console.log("handleFinalizeOrder running");
     const data = {
       type,
       wheel,
       name,
       email,
-      adress
+      receiver,
+      street,
+      city
     };
     const order = await finalizeOrder(this.props.match.params.id, data);
     console.log("going to set state");

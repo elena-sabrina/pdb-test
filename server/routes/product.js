@@ -52,18 +52,23 @@ router.get('/checkout/:id', async (req, res, next) => {
 
 //Submitt Complete Order
 router.patch('/checkout/:id', async (req, res, next) => {
-  const { type, wheel, name, email, adress } = req.body;
+  const { type, wheel, name, email, receiver, street, city } = req.body;
+  const typeprice = 250000000;
+  const wheelprice = 0;
+  const totalprice = typeprice + wheelprice;
 
   try {
     const order = await Order.findByIdAndUpdate(req.params.id, {
       name: name,
       email: email,
-      adress: adress,
+      receiver: receiver,
+      street: street,
+      city: city,
       type: type,
-      typeprice: 200000,
+      typeprice: typeprice,
       wheel: wheel,
-      wheelprice: 60000,
-      totalprice: 260000
+      wheelprice: wheelprice,
+      totalprice: totalprice
     });
 
     console.log(order);
@@ -82,7 +87,10 @@ router.patch('/checkout/:id', async (req, res, next) => {
       <br/>
       Name: ${name}  <br/>
       Email: ${email}  <br/>
-      Adress: ${adress}  <br/>
+      Adress: <br/>
+      ${receiver}  <br/>
+      ${street}  <br/>
+      ${city}  <br/>
       
       Good luck</p>
       `,

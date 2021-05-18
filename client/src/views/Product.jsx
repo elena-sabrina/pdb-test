@@ -27,7 +27,9 @@ class Product extends Component {
           type={this.props.type}
           wheel={this.props.wheel}
           name={this.props.name}
-          adress={this.props.adress}
+          receiver={this.props.receiver}
+          street={this.props.street}
+          city={this.props.city}
           email={this.props.email}
           onConfigureHasChanged={this.props.onConfigureChange}
         />

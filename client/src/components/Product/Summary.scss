@@ -30,6 +30,7 @@
 .summary-button {
   grid-row: 2 / 3;
   margin: 0 1em !important;
+  color: white;
 }
 
 td {
@@ -59,5 +60,13 @@ table {
     display: flex;
     align-items: flex-end;
     padding: 2em 2em 0 2em;
+  }
+
+  .summary {
+    // margin: 0 4em;
+    margin: 0;
+    padding: 0 2em 2em 2em;
+
+    // padding: 0 0 1em 0;
   }
 }
