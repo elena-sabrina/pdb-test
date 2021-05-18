@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
       <div>
         <ContactHeader />
-        <ContactUs />
+
         <Team />
       </div>
     );

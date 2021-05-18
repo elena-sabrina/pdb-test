@@ -13,6 +13,13 @@
   height: 40vh;
 }
 
+.contact-header {
+  background-color: white;
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+  height: 50vh;
+}
+
 .header-copy {
   grid-column: 1 / 7;
   grid-row: 1 / 2;
@@ -46,5 +53,15 @@
     display: flex;
     align-items: flex-end;
     padding: 4em 2em 0em 2em;
+  }
+  .header-copy-small {
+    // height: 30vh;
+    padding: 4em 8em 0em 2em;
+  }
+  .header-small-info {
+    display: flex;
+    align-items: flex-end;
+    padding: 4em 2em 0em 2em;
+    margin: -12em 0 0 0;
   }
 }

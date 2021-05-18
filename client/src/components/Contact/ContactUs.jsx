@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 
 import "./../Home/TeaserTwo.scss";
+import "./Team.scss";
 
 class ContactUs extends Component {
   render() {
     return (
       <div className='container'>
         <div className='wrapper'>
-          <div className='title'>
-            <div>
-              <h2></h2>
-            </div>
-          </div>
-          <div className='teaser-one'>
+          <div className='contact-title'>
             <div>
               <p>
                 Jl. Umpeng Sari No.78, Padang Padang, Kec. Kuta Sel., Kabupaten
