@@ -18,7 +18,7 @@ const orderschema = new mongoose.Schema({
   },
   type: {
     type: String,
-    lowercase: true,
+    uppercase: true,
     trim: true
   },
   typeprice: {

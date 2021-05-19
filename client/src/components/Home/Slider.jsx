@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import wheel from "./../../styles/images/wheel.png";
-import wheel1 from "./../../styles/images/wheel1.jpg";
-import wheel2 from "./../../styles/images/wheel2.jpg";
-import screenshotwheelwide from "./../../styles/images/screenshotwheelwide.png";
-import screenshotwheel from "./../../styles/images/screenshotwheel.png";
 import arrowright from "./../../styles/images/arrow-right.svg";
 import arrowleft from "./../../styles/images/arrow-left.svg";
 import "./Slider.scss";
@@ -54,7 +49,7 @@ class Slider extends Component {
   };*/
 
   incrementCount = () => {
-    const sliderLength = 4;
+    const sliderLength = 2;
     const { image } = this.state;
     var end = image < sliderLength ? false : true;
     if (end) {
@@ -70,7 +65,7 @@ class Slider extends Component {
   };
 
   decrementCount = () => {
-    const sliderLength = 4;
+    const sliderLength = 2;
     const { image } = this.state;
     var start = image < 2 ? true : false;
     if (start) {

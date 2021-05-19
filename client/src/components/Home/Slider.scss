@@ -30,25 +30,27 @@
 }
 
 .image1 {
-  background-image: url("./../../styles/images/screenshotwheel.png");
+  background-image: url("./../../styles/images/wheels/pyramid.jpg");
   background-position: center;
   background-size: cover;
 }
 .image2 {
-  background-image: url("./../../styles/images/wheel.png");
+  background-image: url("./../../styles/images/wheels/all.jpg");
   background-position: center;
   background-size: cover;
 }
+/*
 .image3 {
-  background-image: url("./../../styles/images/wheel1.jpg");
+  background-image: url("./../../styles/images/wheels/parts.jpg");
   background-position: center;
   background-size: cover;
 }
+
 .image4 {
-  background-image: url("./../../styles/images/wheel2.jpg");
+  background-image: url("./../../styles/images/wheels/merchandise.jpg");
   background-position: center;
   background-size: cover;
-}
+}*/
 
 .teaser-slider {
   grid-column: 7/12;
