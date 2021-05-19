@@ -1,5 +1,5 @@
 {
-  "name": "pdb-surfskate",
+  "name": "pdb-test",
   "version": "1.0.0",
   "scripts": {
     "start": "cd server && npm run start",
