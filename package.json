@@ -1,7 +1,8 @@
 {
-  "dependencies": {
-    "axios": "^0.21.1",
-    "react-mailto": "^0.4.0",
-    "react-router-dom": "^5.2.0"
+  "name": "pdb-surfskate",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd server && npm run start",
+    "prepare": "cd server && npm i"
   }
 }
