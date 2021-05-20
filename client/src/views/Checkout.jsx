@@ -36,23 +36,29 @@ class Checkout extends Component {
     street,
     city
   ) => {
-    console.log("handleFinalizeOrder running");
-    const data = {
-      type,
-      wheel,
-      name,
-      email,
-      receiver,
-      street,
-      city
-    };
-    const order = await finalizeOrder(this.props.match.params.id, data);
-    console.log("going to set state");
-    this.setState({
-      order
-    });
-    console.log("going to REDIRECT");
-    window.location.href = `/product/confirmation/${order._id}`;
+    if (!name || !email || !receiver || !street || !city) {
+      alert("Please insert contact info and delivery location!");
+    } else {
+      console.log("handleFinalizeOrder running");
+      const data = {
+        type,
+        wheel,
+        name,
+        email,
+        receiver,
+        street,
+        city
+      };
+
+      const order = await finalizeOrder(this.props.match.params.id, data);
+      console.log("going to set state");
+      this.setState({
+        order
+      });
+
+      console.log("going to REDIRECT");
+      window.location.href = `/product/confirmation/${order._id}`;
+    }
   };
 
   /*  <Summary

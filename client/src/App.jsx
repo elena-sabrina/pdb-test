@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { createOrder } from "./services/order.js";
 import "./styles/main.css";
 
@@ -14,6 +14,7 @@ import Checkout from "./views/Checkout";
 import Confirmation from "./views/Confirmation";
 import Contact from "./views/Contact";
 import Scrolltest from "./views/Scrolltest";
+import Error from "./views/Error";
 
 export class App extends Component {
   constructor(props) {
@@ -32,13 +33,17 @@ export class App extends Component {
       type,
       wheel
     };
-    const order = await createOrder(data);
-    console.log("order app:", order);
-    this.setState({
-      order
-    });
-    console.log("order state app:", this.state.order);
-    window.location.href = `/product/checkout/${order._id}`;
+    if (!type || !wheel) {
+      alert("Please select type and wheel!");
+    } else {
+      const order = await createOrder(data);
+      console.log("order app:", order);
+      this.setState({
+        order
+      });
+      console.log("order state app:", this.state.order);
+      window.location.href = `/product/checkout/${order._id}`;
+    }
   };
 
   render() {
@@ -76,6 +81,9 @@ export class App extends Component {
 
             <Route path='/contact' component={Contact} exact />
             <Route path='/scrolltest' component={Scrolltest} exact />
+            <Route path='/error' component={Error} />
+
+            <Redirect to='/error' />
           </Switch>
 
           <Footer />

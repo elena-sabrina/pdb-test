@@ -25,8 +25,8 @@ const ConfirmationHeader = ({
               <div>
                 <h4>Hi {name}!</h4>
                 <h4>
-                  Thanks for ordering a {type} Model with {wheel} wheels. <br />
-                  We’ll get back to you via: <br />
+                  Thanks for ordering a {type} Model with {wheel} wheels. We’ll
+                  get back to you via: <br />
                   {email}
                 </h4>
                 <h4>

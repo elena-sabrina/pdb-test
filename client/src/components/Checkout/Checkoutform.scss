@@ -26,7 +26,7 @@
 
   input:focus {
     outline: none;
-    background-color: red;
+    background-color: none;
   }
 
   ::-webkit-input-placeholder {
@@ -81,7 +81,8 @@ textarea:focus {
 
 //MOBILE
 @media only screen and (max-width: $mobile) {
-  .form, .form-title {
+  .form,
+  .form-title {
     margin: 2em;
   }
 }
