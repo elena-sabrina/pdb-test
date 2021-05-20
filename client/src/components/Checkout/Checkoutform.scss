@@ -21,7 +21,7 @@
   grid-row: 2 / 6;
 
   button {
-    margin: 1em 0;
+    margin: 3em 0 2em 0;
   }
 
   input:focus {
@@ -81,4 +81,7 @@ textarea:focus {
 
 //MOBILE
 @media only screen and (max-width: $mobile) {
+  .form, .form-title {
+    margin: 2em;
+  }
 }

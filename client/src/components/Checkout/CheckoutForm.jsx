@@ -53,7 +53,7 @@ class Checkoutform extends Component {
       <div>
         <div className='container'>
           <div className='wrapper form-wrapper'>
-            <div className='form-title'>
+          {/* <div className='form-title'>
               <div>
                 <h2>Personal Details</h2>
 
@@ -61,7 +61,7 @@ class Checkoutform extends Component {
                   Thank you for your order. Tell us a bit more about yourself.
                 </p>
               </div>
-            </div>
+            </div>*/}
 
             <form className='form'>
               <div>

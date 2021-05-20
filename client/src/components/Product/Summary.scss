@@ -8,21 +8,21 @@
 //TABLET
 .summary-title {
   grid-column: 1 / 7;
-  grid-row: 1 / 2;
+  grid-row: 1 / 1;
 
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 0 0 1em 0;
 }
 
 .summary {
   grid-column: 4 / 10;
-  grid-row: 2 / 3;
-
+  grid-row: 2 / 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 4em;
+  align-items: center;
+  margin: 0 1em;
 
   // padding: 0 0 1em 0;
 }
@@ -35,12 +35,11 @@
 
 td {
   padding: 0.5em 0;
-
   height: 2em;
 
   p {
     font-size: 1em !important;
-    padding: 0 1em;
+    //padding: 0 1em;
   }
 }
 
@@ -51,6 +50,7 @@ td {
 }
 
 table {
+  width: 20em;
   margin: 1em 0;
 }
 
@@ -68,5 +68,8 @@ table {
     padding: 0 2em 2em 2em;
 
     // padding: 0 0 1em 0;
+  }
+  table {
+    width: 16em;
   }
 }

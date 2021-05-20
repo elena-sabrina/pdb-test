@@ -5,7 +5,7 @@ import "./../Product/Header.scss";
 class CheckoutHeader extends Component {
   render() {
     return (
-      <div className='container header '>
+      <div className='container header-small '>
         <div className='wrapper'>
           <div className='header-copy'>
             <div>
