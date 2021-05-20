@@ -51,10 +51,10 @@ class Checkout extends Component {
       };
 
       const order = await finalizeOrder(this.props.match.params.id, data);
-      console.log("going to set state");
+      /*console.log("going to set state");
       this.setState({
         order
-      });
+      });*/
 
       console.log("going to REDIRECT");
       window.location.href = `/product/confirmation/${order._id}`;

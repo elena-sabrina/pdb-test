@@ -16,7 +16,7 @@ const ConfirmationHeader = ({
       {(type && (
         <>
           <div className='wrapper '>
-            <div className='header header-copy-small'>
+            <div className='header-small header-copy-small'>
               <div>
                 <h1>We've received your order</h1>
               </div>

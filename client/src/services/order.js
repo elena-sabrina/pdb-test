@@ -17,7 +17,7 @@ export const loadOrderforCheckout = async (id) => {
 export const finalizeOrder = async (id, data) => {
   const response = await api.patch(`product/checkout/${id}`, data);
   const order = response.data.order;
-  console.log("asdfasfasdgfasdgasdg");
+  console.log("finalize order feedback", order.city);
   return order;
 };
 
