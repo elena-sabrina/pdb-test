@@ -58,7 +58,7 @@
   }
 
   .header-small {
-    height: 10vh;
+    height: auto;
   }
 
   .header-copy {
@@ -71,9 +71,7 @@
     padding: 4em 8em 0em 2em;
   }
   .header-small-info {
-    display: flex;
-    align-items: flex-end;
-    padding: 4em 2em 0em 2em;
+    padding: 0 2em 0em 2em;
     margin: 0 0 0 0;
   }
 }
