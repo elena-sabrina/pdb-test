@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import insta from "./../styles/images/insta.png";
 
 import "./Footer.scss";
 
@@ -20,7 +21,11 @@ class Footer extends Component {
               </p>
               <br />
 
-              <p>hello@pdbsurfskates.com</p>
+              <button className='underline-button-reverse'>
+                <a href='mailto: pdbsurfskates@gmail.com'>
+                  pdbsurfskates@gmail.com
+                </a>
+              </button>
             </div>
           </div>
           <div className='about'>
@@ -32,16 +37,14 @@ class Footer extends Component {
             <br />
             <br />
             <div className='links'>
-              <Link to='/' className='Link'>
-                Home
-              </Link>
-              <Link to='/product' className='Link'>
-                Order
-              </Link>
-
-              <Link to='/contact' className='Link'>
-                Contact
-              </Link>
+              <a
+                href='https://www.instagram.com/pdbsurfskates/'
+                className='Link'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img className='insta link' src={insta} alt='logo' />
+              </a>
             </div>
           </div>
         </div>

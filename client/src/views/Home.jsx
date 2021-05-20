@@ -76,6 +76,11 @@ class Home extends Component {
                       Develop your surf skills on land. Carve, trim, cutbacks,
                       snaps: Improve your technique. Shred the wave you create.
                     </p>
+                    <button className='underline-button'>
+                      <Link to='/product' className='Link'>
+                        Order now
+                      </Link>
+                    </button>
                   </div>
                 </div>
                 <div className='video intro'>
